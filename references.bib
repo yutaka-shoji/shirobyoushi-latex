@@ -1,0 +1,61 @@
+%% Bibliography for the SHASE white-cover manuscript template.
+%% The 5 entries below reproduce the reference list of the layout sample
+%% (refs/ronbun_layout.pdf).  Processed with upbibtex + junsrt.bst (see
+%% .latexmkrc / manuscript.tex).  junsrt approximates the 執筆要領 13.5
+%% format; entry order is the database order via \nocite{*}.
+%%
+%% Notes on modelling:
+%%   - Japanese names are wrapped in extra braces ({...}) so upbibtex keeps
+%%     them verbatim (e.g. "山羽 基" with its space) instead of splitting
+%%     into first/last.
+%%   - book entries do not print a `pages` field, so book page ranges are
+%%     given in `note` (printed verbatim, so hyphenated ranges survive).
+%%   - English titles are double-braced ({{...}}) so junsrt keeps their
+%%     Title Case instead of lowercasing.
+%%   - BibTeX has no comment syntax: a percent sign is an ordinary character
+%%     and an at-sign starts a new entry, so keep both out of free text
+%%     (including inside entries).
+
+@article{ref1,
+  author  = {{山羽 基} and {中根 理恵} and {中原 信生}},
+  title   = {氷蓄熱槽の熱特性に関する研究（第4報）過冷却水製氷式スラリーアイス型氷蓄熱槽の熱特性},
+  journal = {空気調和・衛生工学会論文集},
+  number  = {59},
+  year    = {1995},
+  pages   = {11--21},
+}
+
+@article{ref2,
+  author  = {{赤坂 裕} and others},
+  title   = {世界の任意地点における設計および平均熱負荷計算のための気象データに関する研究（第1〜3報）},
+  journal = {空気調和・衛生工学会論文集},
+  number  = {45},
+  year    = {1991},
+  pages   = {25--34，No.54（1994-2），pp.11--21，No.58（1995-6），pp.35--45},
+}
+
+@article{ref3,
+  author  = {Shuzo Murakami and Shinsuke Kato and Jie Zeng},
+  title   = {{Flow and Temperature Fields Around Human Body with Various Room Air Distribution-CFD Study on Computational Thermal Manikin (Part 1)}},
+  journal = {ASHRAE Trans.},
+  volume  = {103},
+  year    = {1997},
+  pages   = {3--15},
+}
+
+@book{ref4,
+  editor  = {{空気調和・衛生工学会}},
+  title   = {空気調和・衛生工学便覧},
+  edition = {第12版},
+  volume  = {1},
+  year    = {1995},
+  note    = {pp.66--72},
+}
+
+@book{ref5,
+  author    = {R. C. King and S. Crocker},
+  title     = {{Piping Handbook}},
+  publisher = {McGraw. Hill},
+  year      = {1967},
+  note      = {pp.2-25--2-27},
+}

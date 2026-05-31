@@ -1,0 +1,226 @@
+\documentclass{shirobyoushi}
+% 査読用に著者情報を伏せるときは blind オプションを付ける:
+%   \documentclass[blind]{shirobyoushi}
+
+\usepackage{bxjalipsum}
+\usepackage{luatexja-fontspec}
+% 欧文フォント
+\setmainfont{Times New Roman}
+\setsansfont[BoldFont={MS Gothic}]{MS Gothic}
+
+% 和文フォント（明朝＝本文，ゴシック＝見出し）
+\setmainjfont[BoldFont={MS Mincho}]{MS Mincho}
+\setsansjfont[BoldFont={MS Gothic}]{MS Gothic}
+
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs=false}
+\usepackage{unicode-math}
+\setmathfont{STIX Two Math}
+\usepackage{siunitx}
+
+%% ============================================================
+%% タイトル情報
+%% ============================================================
+\jtitle{空気調和・衛生工学会論文集 版下原稿作成用 \\ レイアウト見本}
+%% 連報の場合は，\jreport{第1報} のように記入する。連報でない場合は，\jreport{} として空にする。
+\jreport{第◯報}
+\jsubtitle{和文論文作成例}
+
+\etitle{Template for Japanese Manuscript for Transactions of the Society
+of Heating, Air-Conditioning and Sanitary Engineers of Japan}
+\ereport{Part ○}
+\esubtitle{Template for English Abstract}
+
+%% 著者: \addauthor{和文氏名}{英文氏名}{所属番号}
+\addauthor{空調 太郎}{Taro KUCHO}{1}
+\addauthor{空調 花子}{Hanako KUCHO}{2}
+\addauthor{衛生 小次郎}{Kojiro EISEI}{3}
+\addauthor{衛生 学}{Manabu EISEI}{3}
+
+%% 所属: \addaffiliation{番号}{和文所属}{和文資格}{英文所属}{英文資格}
+\addaffiliation{1}{空調工業（株）設備部}{特別会員}%
+{Engineering Division, Kucho Industry Co., Ltd.}{Fellow Member}
+\addaffiliation{2}{空調大学工学部}{正会員}%
+{Faculty of Engineering, Kucho University}{Member}
+\addaffiliation{3}{衛生大学大学院工学研究科}{SHASE 技術フェロー}%
+{Graduate School of Engineering, Eisei University}{Fellow Engineer}
+
+%% 和文概要（明朝9pt・37字詰・8行以内・300字程度）
+\jabstract{
+  論文委員会にて採用が決定した論文は，採用をお知らせするとともに，指定する期日までに，原則として完全な版下原稿を提出していただきます。この“レイアウト見本”は，当学会論文集の完全版下原稿（和文）を作成するために必要な情報を，版下原稿の体裁をとって記載してあります。論文投稿時および採用決定後は，“執筆要綱”とこの“レイアウト見本”に基づき，印刷仕上がり後に十分判読できるよう，版下原稿を精密かつ鮮明に作成してください。なお，“論文題名”，“著者名”，“勤務先・所属部署名および会員資格”につきましては，誌面統一のために，筆者作成内容に基づいて当学会にて組版し直しますが，スペースを正しくとり，正確に作成してください。
+}
+
+%% 英文概要（Synopsis，ローマン9pt・2段・550語以内）
+\eabstract{
+  最終ページに，和文論文の場合は英文概要を記入します。
+  本文の最後のページの余白に概要の全文が収まる場合は，参考文献の下に約12mmの間隔を空けて続けて記入してください。
+  全文が収まらない場合は，最終ページの先頭から1行分空間を空けて英文概要を記入します。
+  英文概要は本文と同じスペースに2段組みで550語以内（1ページ以内）とし，“Synopsis:”で始めます。
+  文字の種別はローマン体・9ポイントとします。
+  文末に，事務局より通知する原稿受理日を下の例のように記入します。
+}
+
+%% キーワード（和文は中黒区切り，英文はカンマ区切り。手法KWを先頭に置く）
+\jkeywords{理論解析・実験・実測}
+\ekeywords{Theoretical Analysis, Experiment, Measurement}
+
+%% 受理日（事務局が記入）
+\ereceiveddate{Received October 30, 1998}
+
+\begin{document}
+\maketitle
+
+%% ============================================================
+\section*{はじめに}
+
+本文は，明朝体・9ポイントで，1ページ26文字×46行の二段組みとします。
+
+見出しのレベルは次のとおりとします。各段落の最初の行は，1文字分スペースを空けてください。
+
+なお，“はじめに” ，“結論” ，“謝辞”および“付録”などは章番号を振りません。
+
+%% ============================================================
+\section{章の見出し（2行になるときには，この例のように改行します）}
+
+\subsection{節の見出し}
+
+\subsubsection{項の見出し}
+
+\paragraph{細目の見出し}
+
+以下，文章が続きます。
+なお，章の見出しのみ上に1行空けてください。
+
+箇条書きにする場合は，下記のとおりとします。
+\begin{enumerate}
+  \item 第1箇条書き
+    \begin{enumerate}
+      \item 第2箇条書き
+    \end{enumerate}
+\end{enumerate}
+
+%% ============================================================
+\section{数式}
+
+文中の式については執筆要綱“12．数と数式”を参照して記入してください。
+
+独立した式は数式用のフォントを用い，左から2文字分スペースを空けて，整数式は1行分，分数式は2行分のスペースの中央に記入し，右詰めで
+$\cdots\cdots(1)$，$\cdots\cdots(2)$，のように，2文字分のリーダー
+($\cdots$) に続けて番号を振ります。
+
+量記号で構成された式の掛け算は“$\cdot$”や“$\times$”を用いずに記入し，主に数値で構成された式の掛け算は“$\times$”を用いて記入します。
+
+なお，2行以上になる数式は，数学記号が行の最初になるように工夫して改行します。
+%
+\begin{equation}
+  Q_0 \frac{\mathrm{d}\theta_r}{\mathrm{d}t}
+  = W_0 (\theta_\mathrm{out}-\theta_r^\prime)+\varepsilon S + H
+  \label{eq:heat}
+\end{equation}
+%
+ここに，
+\begin{itemize}
+  \item[] $W_0$: 基準システムの総括熱通過量 \hfill (\unit{\watt\per\kelvin})
+  \item[] $Q_0$: 基準システムの熱容量 \hfill (\unit{\watt})
+  \item[] $S$: 日射量 \hfill (\unit{\watt})
+  \item[] $H$: 吸収熱量 \hfill (\unit{\watt})
+  \item[] $\varepsilon$: 集熱効率 \hfill (-)
+  \item[] $\theta_r^\prime$: 基準システムの基準計算室温 \hfill (\unit{\celsius})
+  \item[] $\theta_\mathrm{out}$: 測定外気温 \hfill (\unit{\celsius})
+\end{itemize}
+
+量記号は，執筆要綱 “11. 記号の書き方” のとおり用い，英語の頭文字を用いたりしません。
+
+単位は，右詰めで記入します。
+
+%% ============================================================
+\section{図・写真および表}
+
+図・写真および表は執筆要綱 “10．図・写真および表”
+とこのレイアウト見本を参照して作成してください\quotenote{脚注は，本文中の注をつける部分に*を付し，当該ページおよび当該の片段の最終行の下に罫線を引き，この作成例のように記入します。文字は，原則的に明朝体・8ポイントを使用してください。当該ページに複数の脚注がある場合は*1，*2，…としてください。}。
+なお，タイトルの位置は，図・写真は図もしくは写真の下側中央とし，表は表の上側中央とします。文字の大きさは8ポイントとします。また，図・写真の注や凡例は図・写真のタイトルと図・写真の間に，表の注や凡例は表の下に8ポイントで記入する。
+
+図・写真および表を配置するのは，論文中で最初に引用されている当該ページ，またはその前後2ページ以内とします。原則としてページの上方にバランス良く配置してください。本文との間は，1行空けます。
+
+大きさは，片段または通し（両段）の二種類とし，最大は1ページ（所定原稿用紙の枠内）大とする。横幅を片段または両段分より狭くして，図・写真および表の横に文章を配置してはいけません。
+
+図および表を本文中に引用する際は，ゴシック体で，\textgt{表-\ref{tab:sample}}，\textgt{図-\ref{fig:sample1}}のように記入します。
+
+% 図表は原則として片段（単段）に収める。
+% 両段に収める場合は table* 環境を用いる。
+\begin{table*}[tb]
+  \centering
+  \caption{表のタイトルは表の上側中央に配置する}\label{tab:sample}
+  \small
+  \setlength{\tabcolsep}{6pt}
+  \begin{tabular}{
+      c l c
+      S[table-format=-3.2]
+      S[table-format=-3.2]
+      S[table-format=-3.2]
+      S[table-format=-2.1]
+    }
+    \toprule
+    & & ケース & {投入熱量 (\unit{\watt})} & {対流熱伝達量 (\unit{\watt})}
+    & {放射熱伝達量\textsuperscript{\dag2} (\unit{\watt})} & {一様拡散温度
+    (\unit{\celsius})} \\
+    \midrule
+    \multirow{4}{*}{外乱・内乱}
+    & 窓面       & 1 & 360.33 & 759.44\rlap{\textsuperscript{\dag1}} &
+    179.10 & 6.5 \\
+    & 外壁       & 2 & 34.89  & 10.47  & 24.42  & 0.4 \\
+    & 内部発熱体 & 3 & 116.30 & 116.30 & 0      & 4.2 \\
+    & 全断熱壁   & 4 & 0      & 88.74  & -83.74 & 3.0 \\
+    \midrule
+    \multirow{3}{*}{操作要因}
+    & 天井冷放射面 & 5 & -232.60 & -120.95 & -111.65 & -4.3 \\
+    & 吹出し口     & 6 & -279.12 & -279.12 & 0       & -10.0 \\
+    & 吸込み口     & 7 & 0       & 0       & 0       & 0.0 \\
+    \bottomrule
+  \end{tabular}
+  \tablenote{
+    \textgt{注}\quad\textsuperscript{\dag1}
+    表中の特定の数値や項目に注が必要な場合は，上付きの\dag（ダガー）を付し，表中と対応させて書きます。\par
+    \hphantom{\textgt{注}\quad}\textsuperscript{\dag2}
+    表中の数値のうち，関連のある数値はけた数，小数点をそろえてください。\par
+  \hphantom{\textgt{注}\quad}表全体に対する注は，\dag（ダガー）をつける必要はありません。}
+\end{table*}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{example-image}
+  \figurenote{\textgt{注} 図の注や説明がある場合は，この位置に左詰めで記入します。}
+  \caption{図のタイトルは図の下中央に配置する}\label{fig:sample1}
+\end{figure}
+
+%% ============================================================
+\section*{結論}
+結論がある場合は，このように“結論” の見出しをつけて章番号を振らずに組み入れます。
+
+%% ============================================================
+\acknowledgments%
+謝辞がある場合は“結論” の後に組み入れます。
+章番号は振りません。
+
+%% ============================================================
+\appendix%
+付録がある場合は，“結論”，“謝辞” の後に組み入れます。
+章番号は振りません。
+
+%% ============================================================
+%% 参考文献（執筆要領 13.5 の体裁）
+%%   references.bib に BibTeX 形式で記述し，upbibtex + junsrt.bst で組版。
+%%   \nocite{*} で .bib 記載順に全件を出力する。
+%% ============================================================
+\nocite{*}
+\bibliographystyle{junsrt}
+\bibliography{references}
+
+%% ============================================================
+%% 英文要素（最終ページ）。\end{document} の直前に置く。
+%% ============================================================
+\makeenglishabstract%
+
+\end{document}
